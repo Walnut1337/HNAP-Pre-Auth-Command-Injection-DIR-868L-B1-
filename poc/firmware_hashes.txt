@@ -1,0 +1,18 @@
+# Firmware component fingerprints — DIR-868L B1 v2.01b05 (DIR868LB1_FW201b05.bin)
+
+# vulnerable component
+/htdocs/cgibin
+  MD5    64a37f67c57dc25b3678dbcc8554c10e
+  SHA256 d09c8d79cbe2e896e78a82adfcc3fab15f804a8ee551524fe148223071392a55
+  size   0x25868 bytes, ARM EABI5 LE, dynamically linked (uClibc 0.9.32.1), base 0x8000
+
+# web server (dispatch + URL budget ~4001)
+/sbin/httpd
+  size   107028 bytes, ARM, thttpd-derivative ("414 Request-URI Too Long" strings)
+
+# static reference files for differential fingerprinting (unauthenticated)
+/htdocs/web/info/Login.html          md5[:16] e576c6d79d9b5ee5  10507 B
+/htdocs/web/info/MobileLogin.html    md5[:16] c4a75249be76cda5   6828 B
+/htdocs/web/config/deviceinfo.js     md5[:16] b8e84e57ed5d6bc4    272 B
+/htdocs/web/Index.html               md5[:16] 76720911c0841130   1198 B
+/htdocs/web/webaccess/logininfo.xml  md5[:16] 953c40de8f941e8d    100 B   (SharePort 8181 instance)
